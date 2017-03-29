@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>I offer no condolences to you using this</title>
+    <link rel="stylesheet" type="text/css" href="/css/vendor/spectrum/spectrum.css">
+  </head>
+  <body>
+    <p>Choose a colour!</p>
+
+    <input type="text" id="picker" />
+
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="/js/vendor/spectrum/spectrum.js"></script>
+    <script type="text/javascript" src="skateboard.min.js"></script> 
+    <script>
+     skateboard(function(stream) { 
+        $('#picker')
+          .spectrum({color: '#ff0000'})
+          .on('change.spectrum', function(e, color) {
+            console.log(color.toHexString());
+            stream.write(color.toHexString());
+          });
+      });
+    </script>
+  </body>  
+</html>
