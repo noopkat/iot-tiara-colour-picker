@@ -5,12 +5,13 @@ body {
 }
 
 button {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   border: none;
   position: relative;
   float: left;
   margin: 10px;
+  border-radius: 60px;
 }
 
 #container {
