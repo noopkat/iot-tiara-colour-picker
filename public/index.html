@@ -2,28 +2,25 @@
 <html>
   <head>
     <title>I offer no condolences to you using this</title>
-    <link rel="stylesheet" type="text/css" href="/css/vendor/spectrum/spectrum.css">
     <link rel="stylesheet" type="text/css" href="/css/override.css">
     
   </head>
   <body>
     <div id="container">
       <p>Choose a colour!</p>
-
-      <input type="text" id="picker" />
+      
+      <button class="jscolor {valueElement:'chosen-value', onFineChange:'setTextColor(this)'}">
+        Pick text color
+      </button>
     </div>
 
-    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="/js/vendor/spectrum/spectrum.js"></script>
+    <script src="/js/vendor/jscolor.min.js"></script>
     <script type="text/javascript" src="skateboard.min.js"></script> 
     <script>
      skateboard(function(stream) { 
-        $('#picker')
-          .spectrum({color: '#ff0000'})
-          .on('change.spectrum', function(e, color) {
-            console.log(color.toHexString());
-            stream.write(color.toHexString());
-          });
+        function setColor(picker) {
+		       stream.write('#' + picker.toString());
+      	}
       });
     </script>
   </body>  
