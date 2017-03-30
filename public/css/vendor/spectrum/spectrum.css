@@ -1,5 +1,5 @@
 /***
-Spectrum Colorpicker v1.7.0
+Spectrum Colorpicker v1.8.0
 https://github.com/bgrins/spectrum
 Author: Brian Grinstead
 License: MIT
@@ -15,7 +15,6 @@ License: MIT
     /* https://github.com/bgrins/spectrum/issues/40 */
     z-index: 9999994;
     overflow: hidden;
-    width: 70%;
 }
 .sp-container.sp-flat {
     position: relative;
@@ -41,7 +40,6 @@ License: MIT
    left:0;
    bottom:0;
    right:0;
-   width: 97%;
 }
 .sp-color {
     position: absolute;
@@ -307,17 +305,15 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
     padding: 10px;
     padding-bottom: 300px;
     margin-bottom: -290px;
-    width: 100%;
 }
 .sp-picker-container {
-    width: 100%;
+    width: 172px;
     border-left: solid 1px #fff;
 }
 
 /* Palettes */
 .sp-palette-container {
     border-right: solid 1px #ccc;
-    width: 100%;
 }
 
 .sp-palette-only .sp-palette-container {
@@ -363,7 +359,6 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
 .sp-palette-button-container,
 .sp-button-container {
     float: right;
-    padding-right: 20px;
 }
 
 /* Replacer (the little preview div that shows up instead of the <input>) */
@@ -379,8 +374,6 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
     background: #eee;
     color: #333;
     vertical-align: middle;
-    width: 20%;
-    height:200px;
 }
 .sp-replacer:hover, .sp-replacer.sp-active {
     border-color: #F0C49B;
@@ -393,15 +386,15 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
 }
 .sp-dd {
     padding: 2px 0;
-    height: 100%;
+    height: 16px;
     line-height: 16px;
     float:left;
     font-size:10px;
 }
 .sp-preview {
     position:relative;
-    width:95%;
-    height:100%;
+    width:25px;
+    height: 20px;
     border: solid 1px #222;
     margin-right: 5px;
     float:left;
@@ -436,7 +429,7 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
   border-bottom: 1px solid #bbb;
   border-radius: 3px;
   color: #333;
-  font-size: 40px;
+  font-size: 14px;
   line-height: 1;
   padding: 5px 4px;
   text-align: center;
