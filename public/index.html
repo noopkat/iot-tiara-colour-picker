@@ -9,17 +9,18 @@
     <div id="container">
       <p>Choose a colour!</p>
       
-      <button class="jscolor {valueElement:'chosen-value', onFineChange:'setTextColor(this)'}">
-        Pick text color
-      </button>
+      <input class="jscolor {onFineChange:'setColor(this)'}" value="ffcc00">
     </div>
 
     <script src="/js/vendor/jscolor.min.js"></script>
     <script type="text/javascript" src="skateboard.min.js"></script> 
     <script>
+      var setColor;
+
      skateboard(function(stream) { 
-        function setColor(picker) {
-		       stream.write('#' + picker.toString());
+        setColor = function(picker) {
+		       stream.write(picker.toHEXString());
+           console.log(picker.toHEXString())
       	}
       });
     </script>
