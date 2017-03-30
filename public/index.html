@@ -6,22 +6,43 @@
     
   </head>
   <body>
+    <p>Choose a colour!</p>
     <div id="container">
-      <p>Choose a colour!</p>
-      
-      <input class="jscolor {onFineChange:'setColor(this)'}" value="ffcc00">
+      <button id="red" style="background-color: #ff0000; color:#ff0000">red</button>
+      <button id="green" style="background-color: #00ff00; color:#00ff00">green</button>
+      <button id="blue" style="background-color: #0000ff; color:#0000ff">blue</button>
+      <button id="purple" style="background-color: #8D00AD; color: #8D00AD">purple</button>
+      <button id="orange" style="background-color: orange; color: orange">orange</button>
+      <button id="pink" style="background-color: #FF20B0; color: #FF20B0">pink</button>
     </div>
 
     <script src="/js/vendor/jscolor.min.js"></script>
     <script type="text/javascript" src="skateboard.min.js"></script> 
     <script>
-      var setColor;
+      var colours = {
+        red: 'FF0000',
+        green: '00FF00',
+        blue: '0000FF',
+        purple: '8D00AD',
+        orange: 'FF2000',
+        pink: 'FF20B0',
+        on: 'FFFFFF',
+        off: '000000'
+      };
+
+      var buttons = document.querySelectorAll('button');
 
      skateboard(function(stream) { 
-        setColor = function(picker) {
-		       stream.write(picker.toHEXString());
-           console.log(picker.toHEXString())
+        setColor = function(colour) {
+		       stream.write(colour);
+           console.log(colour)
       	}
+
+        buttons.forEach(function(button) {
+          button.addEventListener('click', function(e) {
+            setColor(colours[e.target.id])
+          });
+        });
       });
     </script>
   </body>  

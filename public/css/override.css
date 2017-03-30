@@ -3,3 +3,17 @@ body {
   font-family: sans-serif;
   color: #666;
 }
+
+button {
+  width: 100px;
+  height: 100px;
+  border: none;
+  position: relative;
+  float: left;
+  margin: 10px;
+}
+
+#container {
+  position: relative;
+  width: 100%;
+}
