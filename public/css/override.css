@@ -5,6 +5,10 @@ body {
   font-size: 2em;
 }
 
+p {
+  padding-left: 30px;
+}
+
 button {
   width: 120px;
   height: 120px;
